@@ -51,7 +51,7 @@ def add_block(x_ori, y_ori, x_goal, y_goal, obstacle,main_list):
     tempo_list.extend([block33, block32, block11, block31, block23, block21, block12, block13])
     tempo_list = [elem for elem in tempo_list if elem.x >= 0 and elem.y >= 0]  # remove negative coordinate
 
-    print("before remove:", len(main_list))
+   # print("before remove:", len(main_list))
 
     for item in record_list:
         for elem in tempo_list:
@@ -75,7 +75,7 @@ def add_block(x_ori, y_ori, x_goal, y_goal, obstacle,main_list):
 
     # add element closer to goal to main list and "next list" of block22
     for elem in tempo_list:
-        if elem.getdistance() < shortest_dis or elem.getdistance()==1:
+        if elem.getdistance() < shortest_dis or elem.getdistance()==1 or elem.getdistance()==0:
             block22.setnext(elem)
             main_list.append(elem)
             record_list.append(elem)
@@ -96,16 +96,19 @@ def add_block(x_ori, y_ori, x_goal, y_goal, obstacle,main_list):
                 block22.setnext(elem)
                 main_list.append(elem)
                 record_list.append(elem)
-    print("after remove:", len(main_list))
     print("")
-    #for item in record_list:
-        #print(item.x,item.y)
-
     return main_list
 
 def find_path(x_ori, y_ori, x_goal, y_goal, obstacle,main_list):
+    #check if two point are overlap
+    print("X ori, Y ori:", x_ori, y_ori)
+    if x_ori == x_goal and y_ori == y_goal:
+        print("what's up!")
+        return record_list
+
+    #check if goal block is in record list
     for block in record_list:
-        print("debbug:",block.x,block.y)
+        #print("debbug:",block.x,block.y)
         if block.x == x_goal and block.y == y_goal:
             print("what's upppppppppp!!!!!!!!!!!!!!!!")
             return record_list
@@ -116,9 +119,7 @@ def find_path(x_ori, y_ori, x_goal, y_goal, obstacle,main_list):
         block_list2 = main_list[:]
    # print("length of main list:",len(main_list))
     for item in main_list:
-        print("block list 2")
         add_block(item.x, item.y, x_goal, y_goal, obstacle,block_list2)
-    print("length of block list 2:",len(block_list2))
     block_list2 = [x for x in block_list2 if x not in main_list]
     print("length of block list 2 after slice:",len(block_list2))
     for item in block_list2:
@@ -127,7 +128,7 @@ def find_path(x_ori, y_ori, x_goal, y_goal, obstacle,main_list):
 if __name__ == "__main__":
     ob = [Square(4, 4, 0, "block"), Square(4, 4, 1, "block"), Square(4, 4, 2, "block"), Square(4, 4, 3, "block")]
     main_list = []
-    x = find_path(0, 1, 7, 0, ob,main_list)
+    x = find_path(1, 7, 10, 7, ob,main_list)
     print("length of record list:",len(record_list))
     for i in x:
         print("blocks in record:",i.x,i.y)

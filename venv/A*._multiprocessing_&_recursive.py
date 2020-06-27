@@ -104,4 +104,4 @@ def find_path(x_ori, y_ori, x_goal, y_goal, obstacle):
 if __name__ == "__main__":
     ob = [Square(4, 4, 0, "block"), Square(4, 4, 1, "block"), Square(4, 4, 2, "block"), Square(4, 4, 3, "block")]
     find_path(0, 1, 7, 0, ob)
-    print("jkasdhjfgkhasdghfkashjdfkahsfhajskhfjkasjdjkfashdfhasjfhajks",main_list)
+    print("jkasdhjfgkhasdghfkashjdfkahsfhajskhfjkasjdjkfashdfhasjfhajks",len(main_list))
