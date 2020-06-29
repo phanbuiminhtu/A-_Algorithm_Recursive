@@ -29,9 +29,7 @@ class Square:
     def getdistance(self):
         return self.distance
 
-
 main_list = []
-
 
 def find_path(x_ori, y_ori, x_goal, y_goal, obstacle):
     start = time.time()
