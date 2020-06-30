@@ -200,7 +200,7 @@ if __name__ == "__main__":
 
     for i in ob:
         print("x ob, y ob:",i.x,i.y,i.z)
-    block_record = find_path(x_ori, y_ori,z_ori, x_goal, y_goal, z_goal, ob, main_list)
+    find_path(x_ori, y_ori,z_ori, x_goal, y_goal, z_goal, ob, main_list)
     show_path(x_ori,y_ori,z_ori, x_goal, y_goal, z_goal,path_list)
 
     for i in path_list1:
