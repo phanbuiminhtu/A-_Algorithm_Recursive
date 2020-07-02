@@ -96,7 +96,7 @@ def add_block(x_ori, y_ori,z_ori, x_goal, y_goal,z_goal, obstacle,main_list):
     for elem in block222.next:                                      #debbug
         print("block in block222.next:",elem.x,elem.y,elem.z)      
     '''
-    #tell the function to go along the obstacle
+    #tell the function to go along the obstacle.
     if not block222.next:
         for elem in tempo_list:
             if elem.distance == block222.distance and elem not in record_list:
