@@ -207,5 +207,5 @@ if __name__ == "__main__":
         path_list2.insert(0, i)
 
     for i in path_list2:
-        print("blocks in path list 2:",i.x,i.y,i.z)
+        print("blocks on shortest path:",i.x,i.y,i.z)
 
