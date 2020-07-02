@@ -1,6 +1,6 @@
 import sys, math
 
-class Square:
+class Cube:
     def __init__(self, x, y,z, distance):
         self.distance = distance
         self.x = x
@@ -24,41 +24,41 @@ def add_block(x_ori, y_ori,z_ori, x_goal, y_goal,z_goal, obstacle,main_list):
     tempo_list = []
     shortest_dis = max(abs(x_ori - x_goal), abs(y_ori - y_goal),abs(z_ori - z_goal))
 
-    block222 = Square(x_ori,y_ori,z_ori,shortest_dis)  # current block
+    block222 = Cube(x_ori,y_ori,z_ori,shortest_dis)  # current block
     print("block222:", block222.x, block222.y,block222.z)
 
-    block111 = Square(x_ori - 1, y_ori + 1,z_ori-1, max(abs((x_ori - 1) - x_goal), abs((y_ori + 1) - y_goal),abs((z_ori-1) - z_goal)))
-    block121 = Square(x_ori, y_ori + 1,z_ori-1,max(abs(x_ori - x_goal), abs((y_ori + 1) - y_goal),abs((z_ori-1) - z_goal)))
-    block131 = Square(x_ori + 1, y_ori + 1,z_ori-1,max(abs((x_ori + 1) - x_goal), abs((y_ori + 1) - y_goal),abs((z_ori-1) - z_goal)))
-    block211 = Square(x_ori - 1, y_ori,z_ori-1,max(abs((x_ori - 1) - x_goal), abs(y_ori - y_goal),abs((z_ori-1) - z_goal)))
-    block221 = Square(x_ori, y_ori,z_ori-1, max(abs((x_ori - 1) - x_goal), abs(y_ori - y_goal),abs((z_ori-1) - z_goal)))
-    block231 = Square(x_ori + 1, y_ori,z_ori-1,max(abs((x_ori + 1) - x_goal), abs(y_ori - y_goal),abs((z_ori-1) - z_goal)))
-    block311 = Square(x_ori - 1, y_ori - 1,z_ori-1,max(abs((x_ori - 1) - x_goal), abs((y_ori - 1) - y_goal),abs((z_ori-1) - z_goal)))
-    block321 = Square(x_ori, y_ori - 1,z_ori-1,max(abs(x_ori - x_goal), abs((y_ori - 1) - y_goal),abs((z_ori-1) - z_goal)))
-    block331 = Square(x_ori + 1, y_ori - 1,z_ori-1,max(abs((x_ori + 1) - x_goal), abs((y_ori - 1) - y_goal),abs((z_ori-1) - z_goal)))
+    block111 = Cube(x_ori - 1, y_ori + 1,z_ori-1, max(abs((x_ori - 1) - x_goal), abs((y_ori + 1) - y_goal),abs((z_ori-1) - z_goal)))
+    block121 = Cube(x_ori, y_ori + 1,z_ori-1,max(abs(x_ori - x_goal), abs((y_ori + 1) - y_goal),abs((z_ori-1) - z_goal)))
+    block131 = Cube(x_ori + 1, y_ori + 1,z_ori-1,max(abs((x_ori + 1) - x_goal), abs((y_ori + 1) - y_goal),abs((z_ori-1) - z_goal)))
+    block211 = Cube(x_ori - 1, y_ori,z_ori-1,max(abs((x_ori - 1) - x_goal), abs(y_ori - y_goal),abs((z_ori-1) - z_goal)))
+    block221 = Cube(x_ori, y_ori,z_ori-1, max(abs((x_ori - 1) - x_goal), abs(y_ori - y_goal),abs((z_ori-1) - z_goal)))
+    block231 = Cube(x_ori + 1, y_ori,z_ori-1,max(abs((x_ori + 1) - x_goal), abs(y_ori - y_goal),abs((z_ori-1) - z_goal)))
+    block311 = Cube(x_ori - 1, y_ori - 1,z_ori-1,max(abs((x_ori - 1) - x_goal), abs((y_ori - 1) - y_goal),abs((z_ori-1) - z_goal)))
+    block321 = Cube(x_ori, y_ori - 1,z_ori-1,max(abs(x_ori - x_goal), abs((y_ori - 1) - y_goal),abs((z_ori-1) - z_goal)))
+    block331 = Cube(x_ori + 1, y_ori - 1,z_ori-1,max(abs((x_ori + 1) - x_goal), abs((y_ori - 1) - y_goal),abs((z_ori-1) - z_goal)))
 
-    block112 = Square(x_ori - 1, y_ori + 1, z_ori,max(abs((x_ori - 1) - x_goal), abs((y_ori + 1) - y_goal), abs(z_ori - z_goal)))
-    block122 = Square(x_ori, y_ori + 1, z_ori,max(abs(x_ori - x_goal), abs((y_ori + 1) - y_goal), abs(z_ori - z_goal)))
-    block132 = Square(x_ori + 1, y_ori + 1, z_ori,max(abs((x_ori + 1) - x_goal), abs((y_ori + 1) - y_goal), abs(z_ori - z_goal)))
-    block212 = Square(x_ori - 1, y_ori, z_ori,max(abs((x_ori - 1) - x_goal), abs(y_ori - y_goal), abs(z_ori - z_goal)))
-    block232 = Square(x_ori + 1, y_ori, z_ori,max(abs((x_ori + 1) - x_goal), abs(y_ori - y_goal), abs(z_ori - z_goal)))
-    block312 = Square(x_ori - 1, y_ori - 1, z_ori,max(abs((x_ori - 1) - x_goal), abs((y_ori - 1) - y_goal), abs(z_ori - z_goal)))
-    block322 = Square(x_ori, y_ori - 1, z_ori,max(abs(x_ori - x_goal), abs((y_ori - 1) - y_goal), abs(z_ori - z_goal)))
-    block332 = Square(x_ori + 1, y_ori - 1, z_ori - 1,max(abs((x_ori + 1) - x_goal), abs((y_ori - 1) - y_goal), abs(z_ori - z_goal)))
+    block112 = Cube(x_ori - 1, y_ori + 1, z_ori,max(abs((x_ori - 1) - x_goal), abs((y_ori + 1) - y_goal), abs(z_ori - z_goal)))
+    block122 = Cube(x_ori, y_ori + 1, z_ori,max(abs(x_ori - x_goal), abs((y_ori + 1) - y_goal), abs(z_ori - z_goal)))
+    block132 = Cube(x_ori + 1, y_ori + 1, z_ori,max(abs((x_ori + 1) - x_goal), abs((y_ori + 1) - y_goal), abs(z_ori - z_goal)))
+    block212 = Cube(x_ori - 1, y_ori, z_ori,max(abs((x_ori - 1) - x_goal), abs(y_ori - y_goal), abs(z_ori - z_goal)))
+    block232 = Cube(x_ori + 1, y_ori, z_ori,max(abs((x_ori + 1) - x_goal), abs(y_ori - y_goal), abs(z_ori - z_goal)))
+    block312 = Cube(x_ori - 1, y_ori - 1, z_ori,max(abs((x_ori - 1) - x_goal), abs((y_ori - 1) - y_goal), abs(z_ori - z_goal)))
+    block322 = Cube(x_ori, y_ori - 1, z_ori,max(abs(x_ori - x_goal), abs((y_ori - 1) - y_goal), abs(z_ori - z_goal)))
+    block332 = Cube(x_ori + 1, y_ori - 1, z_ori - 1,max(abs((x_ori + 1) - x_goal), abs((y_ori - 1) - y_goal), abs(z_ori - z_goal)))
 
-    block113 = Square(x_ori - 1, y_ori + 1, z_ori + 1,max(abs((x_ori - 1) - x_goal), abs((y_ori + 1) - y_goal), abs((z_ori + 1) - z_goal)))
-    block123 = Square(x_ori, y_ori + 1, z_ori + 1,max(abs(x_ori - x_goal), abs((y_ori + 1) - y_goal), abs((z_ori + 1) - z_goal)))
-    block133 = Square(x_ori + 1, y_ori + 1, z_ori + 1,max(abs((x_ori + 1) - x_goal), abs((y_ori + 1) - y_goal), abs((z_ori + 1) - z_goal)))
-    block213 = Square(x_ori - 1, y_ori, z_ori + 1,max(abs((x_ori - 1) - x_goal), abs(y_ori - y_goal), abs((z_ori + 1) - z_goal)))
-    block223 = Square(x_ori, y_ori, z_ori+1,max(abs((x_ori - 1) - x_goal), abs(y_ori - y_goal), abs((z_ori + 1) - z_goal)))
-    block233 = Square(x_ori + 1, y_ori, z_ori + 1,max(abs((x_ori + 1) - x_goal), abs(y_ori - y_goal), abs((z_ori + 1) - z_goal)))
-    block313 = Square(x_ori - 1, y_ori - 1, z_ori + 1,max(abs((x_ori - 1) - x_goal), abs((y_ori - 1) - y_goal), abs((z_ori + 1) - z_goal)))
-    block323 = Square(x_ori, y_ori - 1, z_ori + 1,max(abs(x_ori - x_goal), abs((y_ori - 1) - y_goal), abs((z_ori + 1) - z_goal)))
-    block333 = Square(x_ori + 1, y_ori - 1, z_ori + 1,max(abs((x_ori + 1) - x_goal), abs((y_ori - 1) - y_goal), abs((z_ori + 1) - z_goal)))
+    block113 = Cube(x_ori - 1, y_ori + 1, z_ori + 1,max(abs((x_ori - 1) - x_goal), abs((y_ori + 1) - y_goal), abs((z_ori + 1) - z_goal)))
+    block123 = Cube(x_ori, y_ori + 1, z_ori + 1,max(abs(x_ori - x_goal), abs((y_ori + 1) - y_goal), abs((z_ori + 1) - z_goal)))
+    block133 = Cube(x_ori + 1, y_ori + 1, z_ori + 1,max(abs((x_ori + 1) - x_goal), abs((y_ori + 1) - y_goal), abs((z_ori + 1) - z_goal)))
+    block213 = Cube(x_ori - 1, y_ori, z_ori + 1,max(abs((x_ori - 1) - x_goal), abs(y_ori - y_goal), abs((z_ori + 1) - z_goal)))
+    block223 = Cube(x_ori, y_ori, z_ori+1,max(abs((x_ori - 1) - x_goal), abs(y_ori - y_goal), abs((z_ori + 1) - z_goal)))
+    block233 = Cube(x_ori + 1, y_ori, z_ori + 1,max(abs((x_ori + 1) - x_goal), abs(y_ori - y_goal), abs((z_ori + 1) - z_goal)))
+    block313 = Cube(x_ori - 1, y_ori - 1, z_ori + 1,max(abs((x_ori - 1) - x_goal), abs((y_ori - 1) - y_goal), abs((z_ori + 1) - z_goal)))
+    block323 = Cube(x_ori, y_ori - 1, z_ori + 1,max(abs(x_ori - x_goal), abs((y_ori - 1) - y_goal), abs((z_ori + 1) - z_goal)))
+    block333 = Cube(x_ori + 1, y_ori - 1, z_ori + 1,max(abs((x_ori + 1) - x_goal), abs((y_ori - 1) - y_goal), abs((z_ori + 1) - z_goal)))
 
     tempo_list.extend([block331, block321, block111, block311, block231, block211, block121, block131, block221,block112,
                        block122,block132,block212,block232,block312,block322,block332,block113,block123,block133,block213,block223,block233,block313,block323,block333])
-    tempo_list = [elem for elem in tempo_list if elem.x >= 0 and elem.y >= 0]  # Remove negative coordinate
+    tempo_list = [elem for elem in tempo_list if elem.x >= 0 and elem.y >= 0 and elem.z >=0]  # Remove negative coordinate
 
     for item in record_list:
         for elem in tempo_list:
@@ -142,7 +142,7 @@ def find_path(x_ori, y_ori,z_ori, x_goal, y_goal,z_goal, obstacle, main_list):
     '''
     for item in block_list2:
         #print("block being put in to find path:",item.x,item.y)        #debbug
-        return find_path(item.x,item.y,item.z,x_goal,y_goal,z_goal,obstacle,block_list2)
+        find_path(item.x,item.y,item.z,x_goal,y_goal,z_goal,obstacle,block_list2)
 
 path_list1 = []
 def show_path(x_ori,y_ori,z_ori,x_goal,y_goal,z_goal,path):
@@ -194,7 +194,7 @@ if __name__ == "__main__":
             y_ob = int(input("input y coordinate of obstacle:"))
             z_ob = int(input("input z coordinate of obstacle:"))
             print("")
-            ob.append(Square(x_ob,y_ob,z_ob,0))
+            ob.append(Cube(x_ob,y_ob,z_ob,0))
         except ValueError:
             break
 

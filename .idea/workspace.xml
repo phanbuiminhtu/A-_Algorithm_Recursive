@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3e8ce5be-9ce8-4eac-94c1-86a172f62d0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/A*_recusive.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/A*_recusive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/A*_3D_recusive.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/A*_3D_recusive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/A*_visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/A*_visualize.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,17 +27,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/venv/A*_recusive.py">
+        <entry file="file://$PROJECT_DIR$/venv/A*_3D_recusive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="159" column="92" selection-start-line="159" selection-start-column="92" selection-end-line="159" selection-end-column="92" />
+            <state relative-caret-position="242">
+              <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/A*_visualize.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -47,6 +55,14 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>spot</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Square</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -64,6 +80,7 @@
         <option value="$PROJECT_DIR$/venv/A*._multiprocessing_&amp;_recursive.py" />
         <option value="$PROJECT_DIR$/venv/A*_recusive.py" />
         <option value="$PROJECT_DIR$/venv/A*_visualize.py" />
+        <option value="$PROJECT_DIR$/venv/A*_3D_recusive.py" />
       </list>
     </option>
   </component>
@@ -99,7 +116,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -215,18 +232,33 @@
       <option name="project" value="LOCAL" />
       <updated>1593493105342</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="find the shortest path complete. Project is done!">
+      <created>1593500490895</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593500490895</updated>
+    </task>
+    <task id="LOCAL-00005" summary="finding shortest path completed. Project is done!">
+      <created>1593500528339</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593500528339</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2489426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49876544" visible="true" weight="0.39742213" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49876544" visible="true" weight="0.35982814" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -243,7 +275,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finding goal complete. Next step is to find path by adding previous block" />
     <MESSAGE value="find the shortest path complete. Project is done!" />
-    <option name="LAST_COMMIT_MESSAGE" value="find the shortest path complete. Project is done!" />
+    <MESSAGE value="finding shortest path completed. Project is done!" />
+    <option name="LAST_COMMIT_MESSAGE" value="finding shortest path completed. Project is done!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/A*._multiprocessing_&amp;_recursive.py">
@@ -257,12 +290,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/A*_visualize.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/A*_recusive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="159" column="92" selection-start-line="159" selection-start-column="92" selection-end-line="159" selection-end-column="92" />
+        <state relative-caret-position="446">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/A*_3D_recusive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
         </state>
       </provider>
     </entry>
